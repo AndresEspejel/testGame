@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c7v47sg5sy2ng"]
+
+[ext_resource type="Texture2D" uid="uid://d257ffddlidy4" path="res://icon.svg" id="1_uvfvp"]
+[ext_resource type="Script" uid="uid://nm1bqgwf1uo7" path="res://sprite_test.gd" id="2_ds13r"]
+
+[node name="SpriteTest" type="Sprite2D" unique_id=301910313]
+position = Vector2(526, 290)
+texture = ExtResource("1_uvfvp")
+script = ExtResource("2_ds13r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2082587580]
+position = Vector2(200, 150)
+texture = ExtResource("1_uvfvp")
