@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed: int = 250
+@export var speed: int = 200
 
 func _ready() -> void:
 	pass
@@ -8,5 +8,5 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	position.x += speed  * delta
+	position.x -= speed  * delta
 	rotation += 2.0 * delta

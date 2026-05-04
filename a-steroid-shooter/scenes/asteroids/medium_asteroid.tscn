@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://dvvyld8hhi5tg"]
 
 [ext_resource type="Texture2D" uid="uid://dfafuhd56i5c3" path="res://assets/sprites/rock-medium.png" id="1_5f0el"]
+[ext_resource type="Script" uid="uid://clpbwgahl8l3f" path="res://scenes/asteroids/asteroid.gd" id="1_nnmk3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5f0el"]
 radius = 44.04294
 height = 104.47818
 
 [node name="MediumAsteroid" type="Area2D" unique_id=1049668610]
+script = ExtResource("1_nnmk3")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1002972534]

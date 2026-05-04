@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://0s4f88r4myqr"]
+
+[ext_resource type="Texture2D" uid="uid://dt3k3hglpr5au" path="res://assets/sprites/ship.png" id="1_8afob"]
+[ext_resource type="Script" uid="uid://blmb1tr7yrwlv" path="res://scenes/player/player.gd" id="1_dovo2"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1561197866]
+script = ExtResource("1_dovo2")
+speed = 150
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1872744272]
+rotation = 1.5707964
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_8afob")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1283363559]
+polygon = PackedVector2Array(35, 1, -27, -48, -28, -24, -37, -11, -37, 8, -27, 21, -25, 50)

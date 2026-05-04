@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://d181nekxoe4w1"]
+
+[ext_resource type="Texture2D" uid="uid://bdwpfjoyja6w8" path="res://assets/sprites/background.png" id="1_hyk8p"]
+[ext_resource type="PackedScene" uid="uid://dqljlom6xerf1" path="res://scenes/asteroids/big_asteroid.tscn" id="2_iuonh"]
+[ext_resource type="Script" uid="uid://bkw240i3c62bg" path="res://scenes/main/asteroid_spawner.gd" id="3_k2fmo"]
+[ext_resource type="PackedScene" uid="uid://0s4f88r4myqr" path="res://scenes/player/player.tscn" id="4_l3cfh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3cfh"]
+size = Vector2(1162, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6q06x"]
+size = Vector2(20, 682)
+
+[node name="Main" type="Node2D" unique_id=1175626063]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1819154150]
+position = Vector2(609, 238)
+texture = ExtResource("1_hyk8p")
+
+[node name="Player" parent="." unique_id=1561197866 instance=ExtResource("4_l3cfh")]
+position = Vector2(190, 344)
+
+[node name="Walls" type="Node2D" parent="." unique_id=1094889398]
+
+[node name="TopWall" type="StaticBody2D" parent="Walls" unique_id=1245176066]
+position = Vector2(9, -11)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/TopWall" unique_id=675614427]
+position = Vector2(571, 0)
+shape = SubResource("RectangleShape2D_l3cfh")
+
+[node name="BottomWall" type="StaticBody2D" parent="Walls" unique_id=2135223822]
+position = Vector2(7, 660)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/BottomWall" unique_id=1728910991]
+position = Vector2(571, 0)
+shape = SubResource("RectangleShape2D_l3cfh")
+
+[node name="LeftWall" type="StaticBody2D" parent="Walls" unique_id=556363219]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/LeftWall" unique_id=1483642774]
+position = Vector2(0, 331)
+shape = SubResource("RectangleShape2D_6q06x")
+
+[node name="RingtWall" type="StaticBody2D" parent="Walls" unique_id=1779523381]
+position = Vector2(1165, 0)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RingtWall" unique_id=1697470900]
+position = Vector2(0, 331)
+shape = SubResource("RectangleShape2D_6q06x")
+
+[node name="AsteroidSpawner" type="Marker2D" parent="." unique_id=1826800794]
+position = Vector2(1314, 355)
+script = ExtResource("3_k2fmo")
+big_asteroid_scene = ExtResource("2_iuonh")

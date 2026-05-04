@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c5y3fu5ctul8"]
+
+[ext_resource type="Texture2D" uid="uid://d1o84qh8y3hb1" path="res://assets/sprites/laser.png" id="1_0kheo"]
+[ext_resource type="Script" uid="uid://clufakam6dklm" path="res://scenes/laser/laser.gd" id="1_j8ec3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j8ec3"]
+radius = 8.0
+height = 72.0
+
+[node name="laser" type="Area2D" unique_id=370616044]
+script = ExtResource("1_j8ec3")
+speet = 1000
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=250154614]
+rotation = 1.5707964
+texture = ExtResource("1_0kheo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372930723]
+position = Vector2(0, -7.283063e-16)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_j8ec3")

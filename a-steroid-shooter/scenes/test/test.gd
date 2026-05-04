@@ -20,10 +20,22 @@ var player_1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("Hola " + cadena )
+	say_hi("Andy", 100)
+	var damage = calculate_damage(5, 2)
+	print("El daño fue de "+ str(damage))
 	$Sprite2D.visible = is_visible
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func say_hi(nombre: String,vida : int):
+	print("hola "+nombre+ " Tu vida es de: " + str(vida))
+
+func calculate_damage(damage, multiplier):
+	return damage * multiplier
+	
+	
+	
